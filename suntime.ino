@@ -1,8 +1,10 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <stdio.h>
+#include <rtc.h>
 #include <avr/pgmspace.h>
-#include "DS1307.h" // written by  mattt on the Arduino forum and modified by D. Sjunnesson     
+#include "DS1307.h" // written by  mattt on the Arduino forum and modified by D.
+ Sjunnesson     
 //#include <LiquidCrystal.h>  This is not done
 #define SIX 360
 
