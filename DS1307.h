@@ -1,3 +1,10 @@
+/*
+ <datalogger.ino> Copyright (C) <2015> <Sneha Kopallu>,<Prasad Mehendale> 
+         This program comes with ABSOLUTELY NO WARRANTY; 
+         for details, refer to the GPL-3.0.txt on www.gnu.org .
+         This is free software, and you are welcome to redistribute 
+         it under the conditions of GNU-GPL V3.0
+*/
 #include <Arduino.h>
 #ifndef DS1307_h
 #define DS1307_h
