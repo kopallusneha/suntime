@@ -1,10 +1,3 @@
-/*
- <datalogger.ino> Copyright (C) <2015> <Sneha Kopallu>,<Prasad Mehendale> 
-         This program comes with ABSOLUTELY NO WARRANTY; 
-         for details, refer to the GPL-3.0.txt on www.gnu.org .
-         This is free software, and you are welcome to redistribute 
-         it under the conditions of GNU-GPL V3.0
-*/
 #include <Arduino.h>
 #ifndef DS1307_h
 #define DS1307_h
@@ -18,6 +11,7 @@
 #define DS1307_DATE 4
 #define DS1307_MTH 5
 #define DS1307_YR 6
+#define DS1307_
 
 #define DS1307_BASE_YR 2000
 
@@ -117,6 +111,11 @@ void DS1307::save(void)
     Wire.send(rtc_bcd[i]);
     #endif
   }
+  #if defined(ARDUINO) && ARDUINO >= 100
+    Wire.write(0x10); // to enable the sqw output enable
+    #else
+    Wire.send(0x10);  // to enable the sqw output enable
+    #endif
   Wire.endTransmission();
 }
 
